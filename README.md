@@ -1,6 +1,9 @@
 # Projet Portfolio
 
 But: Créer son portfolio présentant les différents projets réalisés durant la formation
+_Ceci est une ancienne version de mon portfolio_
+
+[Voir mon portfolio actuel](https://jphindev.com)
 
 ---
 
