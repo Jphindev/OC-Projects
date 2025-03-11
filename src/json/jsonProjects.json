@@ -1,0 +1,179 @@
+[
+	{
+		"title": "Front-end JS d’un site portfolio",
+		"imgSrc": "/photos/presP3_85.webp",
+		"imgAlt": "Projet Javascript",
+		"technoIcons": [
+			{
+				"technoTitle": "html",
+				"technoSrc": "/icons/html5.svg",
+				"technow": 24,
+				"technoh": 32
+			},
+			{
+				"technoTitle": "CSS",
+				"technoSrc": "/icons/css3.svg",
+				"technow": 27,
+				"technoh": 27
+			},
+			{
+				"technoTitle": "Javascript",
+				"technoSrc": "/icons/javascript.svg",
+				"technow": 24,
+				"technoh": 27
+			}
+		],
+		"linksIcons": [
+			{
+				"linkAlt": "Github",
+				"linkSrc": "/icons/github.svg",
+				"linkHref": "https://github.com/JeanPhiH/Projet_3",
+				"linkTarget": "_blank"
+			}
+		],
+		"mission": "Créer le front-end dynamique d'un site portfolio d'une architecte d'intérieur",
+		"constraints": "Utilisation des langages html, CSS et Javascript seuls",
+		"issues": "Gestion du token d'authentification: Pour autoriser l'ajout d’un nouveau travail, il fallait enregistrer le token dans un sessionstorage puis le déclarer dans le header de la requête lors du fetch post.",
+		"skills": [
+			{ "skill": "Création de modales" },
+			{ "skill": "Communication avec un back-end" },
+			{ "skill": "Requêtes vers une API" },
+			{ "skill": "Respect de la maquette Figma" }
+		]
+	},
+
+	{
+		"title": "Debug et optimisation d'un site",
+		"imgSrc": "/photos/presP5_85.webp",
+		"imgAlt": "Projet debug",
+		"technoIcons": [
+			{
+				"technoTitle": "SEO",
+				"technoSrc": "/icons/seo.svg",
+				"technow": 24,
+				"technoh": 24
+			},
+			{
+				"technoTitle": "Lighhouse",
+				"technoSrc": "/icons/lighthouse.svg",
+				"technow": 24,
+				"technoh": 24
+			},
+			{
+				"technoTitle": "WAVE",
+				"technoSrc": "/icons/WAVE.webp",
+				"technow": 24,
+				"technoh": 24
+			}
+		],
+		"linksIcons": [
+			{
+				"linkAlt": "Github",
+				"linkSrc": "/icons/github.svg",
+				"linkHref": "https://github.com/JeanPhiH/Projet_5",
+				"linkTarget": "_blank"
+			},
+			{
+				"linkAlt": "Site",
+				"linkSrc": "/icons/external-link.svg",
+				"linkHref": "https://jeanphih.github.io/Projet_5/",
+				"linkTarget": "_blank"
+			}
+		],
+		"mission": "Débuguer et optimiser un site web pour le rendre plus rapide, plus performant et mieux référencé grâce au SEO",
+		"constraints": "Avoir un score Lighthouse supérieur à 95% pour desktop et mobile",
+		"issues": "Avoir un bon score lighthouse pour mobile: Résolu grâce à l’utilisation de la propriété srcset afin de charger des images plus petites pour l'affichage mobile.",
+		"skills": [
+			{ "skill": "SEO, résultats enrichis et metadonnées" },
+			{ "skill": "Compréhension de l'outil Lighthouse" },
+			{ "skill": "Rendre le site plus inclusif grâce à l'outil WAVE" },
+			{ "skill": "Écrire un rapport d'optimisation" }
+		]
+	},
+
+	{
+		"title": "Front-end React et Sass d'un site",
+		"imgSrc": "/photos/presP6_85.webp",
+		"imgAlt": "Projet React",
+		"technoIcons": [
+			{
+				"technoTitle": "React",
+				"technoSrc": "/icons/react.svg",
+				"technow": 24,
+				"technoh": 24
+			},
+			{
+				"technoTitle": "Sass",
+				"technoSrc": "/icons/sass.svg",
+				"technow": 24,
+				"technoh": 24
+			}
+		],
+		"linksIcons": [
+			{
+				"linkAlt": "Github",
+				"linkSrc": "/icons/github.svg",
+				"linkHref": "https://github.com/JeanPhiH/Projet_6",
+				"linkTarget": "_blank"
+			},
+			{
+				"linkAlt": "Site",
+				"linkSrc": "/icons/external-link.svg",
+				"linkHref": "https://projet-6-psi.vercel.app/",
+				"linkTarget": "_blank"
+			}
+		],
+		"mission": "Créer le front-end d'un site de location immobilière",
+		"constraints": "Utiliser React JS et un langage Scss pour le style",
+		"issues": "Avoir des animations fluide pour les collapses: Résolu en changeant progressivment la taille de la div et la révélation du texte par l'utilisation de keyframes.",
+		"skills": [
+			{ "skill": "Logique des composants React" },
+			{ "skill": "Spécificités du langage Scss" },
+			{ "skill": "Création d'un carousel" },
+			{ "skill": "Création de collapse via des animations CSS" }
+		]
+	},
+
+	{
+		"title": "Back-end Express et MongoDB",
+		"imgSrc": "/photos/presP7_85.webp",
+		"imgAlt": "Projet Back-end",
+		"technoIcons": [
+			{
+				"technoTitle": "Node",
+				"technoSrc": "/icons/node-js.svg",
+				"technow": 24,
+				"technoh": 27
+			},
+			{
+				"technoTitle": "Express",
+				"technoSrc": "/icons/express.svg",
+				"technow": 24,
+				"technoh": 27
+			},
+			{
+				"technoTitle": "MongoDB",
+				"technoSrc": "/icons/mongodb.svg",
+				"technow": 24,
+				"technoh": 27
+			}
+		],
+		"linksIcons": [
+			{
+				"linkAlt": "Github",
+				"linkSrc": "/icons/github.svg",
+				"linkHref": "https://github.com/JeanPhiH/Projet_7",
+				"linkTarget": "_blank"
+			}
+		],
+		"mission": "Créer le back-end d'un site de notation de livres",
+		"constraints": "Utiliser Express JS et une base de données MongoDB",
+		"issues": "Gestion de la sauvegarde d'images: Résolu en utilisant les middlewares Multer et sharp afin de sauvegarder des images optimisées.",
+		"skills": [
+			{ "skill": "Logique serveur, routes, middleware et controller" },
+			{ "skill": "Opérations CRUD" },
+			{ "skill": "Sécurisation de la base de données" },
+			{ "skill": "Authentification et connexion via token" }
+		]
+	}
+]

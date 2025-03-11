@@ -1,0 +1,120 @@
+@tailwind base;
+
+@layer base {
+	h1,
+	h2 {
+		@apply font-bold text-highlight dark:text-highdark text-center;
+	}
+	h1 {
+		@apply text-3xl font-galindo;
+	}
+	h2 {
+		@apply flex items-center text-highlight dark:text-light text-2xl w-fit px-10 h-24 shadow-inner shadow-light dark:shadow-lg dark:shadow-dark/50 rounded-full mx-auto mb-10 font-galindo tracking-wider dark:bg-light bg-gradient-to-br from-light/15 to-dark dark:from-dark dark:to-highdark;
+	}
+	h3 {
+		@apply text-lg text-light dark:text-dark font-bold;
+	}
+	h4 {
+		@apply text-highlight dark:text-highdark mt-4;
+	}
+	section {
+		@apply px-4 mt-32 max-w-screen-xl mx-auto;
+	}
+	input,
+	textarea {
+		@apply w-full p-2 bg-dark dark:bg-light text-light dark:text-dark rounded-lg focus:outline focus:outline-2 focus:outline-highlight dark:focus:outline-highdark hover:outline hover:outline-2  hover:outline-light dark:hover:outline-dark;
+	}
+	span {
+		@apply font-bold text-highlight dark:text-highdark;
+	}
+}
+
+@tailwind components;
+
+@tailwind utilities;
+/*  */
+:root {
+	--color-dark: 10 25 47; /* #0a192f */
+	--color-light: 221 228 230; /* #dde4e6 */
+	--color-highlight: 250 176 5; /* #fab005 */
+	--color-highdark: 49 119 179; /* #3177b3 */
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+@layer utilities {
+	.text-balance {
+		text-wrap: balance;
+	}
+	.divbar {
+		@apply h-20 w-0.5 mb-20 bg-light/50 dark:bg-dark/50 mx-auto;
+	}
+}
+
+.reset {
+	all: unset;
+}
+
+.frametl {
+	clip-path: polygon(0 0, 100% 0, 35% 100%, 0 100%);
+	width: 300px;
+	height: 182px;
+}
+.framebl {
+	clip-path: polygon(0 100%, 100% 100%, 35% 0, 0 0);
+	width: 300px;
+	height: 182px;
+	z-index: 1;
+}
+.framer {
+	clip-path: polygon(100% 0, 0% 50%, 100% 100%);
+	width: 185px;
+	height: 350px;
+	z-index: 1;
+}
+
+@media (min-width: 1024px) {
+	.frametl {
+		width: 400px;
+		height: 182px;
+	}
+	.frametl img {
+		transition: transform 0.4s;
+		transform-origin: top;
+		transform-style: preserve-3d;
+	}
+	.frametl:hover img {
+		transform: rotateX(90deg);
+		transform-origin: top;
+	}
+
+	.framebl {
+		width: 400px;
+		height: 182px;
+	}
+	.framebl img {
+		transition: transform 0.4s;
+		transform-origin: bottom;
+		transform-style: preserve-3d;
+	}
+	.framebl:hover img {
+		transform: rotateX(90deg);
+		transform-origin: bottom;
+	}
+
+	.framer {
+		width: 250px;
+		height: 350px;
+	}
+	.framer img {
+		transition: transform 0.4s;
+		transform-origin: right;
+		transform-style: preserve-3d;
+	}
+	.framer:hover img {
+		transform: rotateY(90deg);
+		transform-origin: right;
+	}
+}
