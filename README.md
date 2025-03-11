@@ -1,11 +1,13 @@
-# Projet Kasa
+# Projet Mon vieux Grimoire
 
-But: Intégrer une maquette Figma avec React et SCSS
+But: Créer le backend d'un site de notations de livres
 
-Pour installer:
-`npm install`
+## Comment lancer le projet ?
 
-Pour lancer:
-`npm run dev`
+### Pour le frontend
 
-[Lien vers la version en ligne](https://projet-6-psi.vercel.app/)
+`npm install` puis `npm run start` pour lancer le projet React.
+
+### Pour le backend
+
+`npm install` puis `npm run start` pour lancer le serveur Node.
