@@ -1,0 +1,80 @@
+.carousel {
+	position: relative;
+	height: 255px;
+	width: 100%;
+	border-radius: 10px;
+	overflow: hidden;
+	
+	.slide {
+		display: flex;
+		@include hw100;
+		transition: ease-out 0.3s;
+
+		.img-container {
+			@include hw100;
+			min-width: 100%;
+			
+			img {
+				@include hw100;
+				object-fit: cover;
+			}
+		}
+	}
+}
+
+.prev, .next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 20px;
+	cursor: pointer;
+	z-index: 100;
+
+	img{
+		height: 100%;}
+}
+
+.prev {
+	left: 10px;
+
+	img {
+		transform: rotate(180deg);
+	}
+}
+
+.next {
+	right: 10px;
+}
+
+.counter {
+	display: none;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 25px;
+	font-size: 18px;
+	color: white;
+	z-index: 100;
+}
+
+
+@media (min-width: $breakpoint-mobile) {
+	.carousel {
+		height: 415px;
+		border-radius: 25px;
+	}
+
+	.prev, .next {
+		height: 80px;
+	}
+	.prev {
+		left: 23px;
+	}
+	.next {
+		right: 23px;
+	}
+
+	.counter {
+		display: block;
+	}
+}

@@ -1,0 +1,35 @@
+.footer {
+	height: 209px;
+	background-color: black;
+	margin-top: 27px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	p {
+		width: 35%;
+		color: white;
+		text-align: center;
+		font-size: 12px;
+	}
+}
+
+.logo-footer img{
+	width: 122px;
+	// Changing logo's color into white
+	filter: brightness(0) invert(100%);
+	-webkit-filter: brightness(0) invert(100%);
+}
+
+@media (min-width: $breakpoint-mobile) {
+	.footer {
+		margin-top: 50px;
+		justify-content: flex-end;
+
+		p {
+			font-size: 24px;
+			margin: 29px;
+		}
+	}
+}
