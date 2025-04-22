@@ -8,4 +8,4 @@ Pour installer:
 Pour lancer:
 `npm run dev`
 
-[Lien vers la version en ligne](https://projet-6-psi.vercel.app/)
+<a href="https://projet-6-psi.vercel.app/" target="_blank">Lien vers la version en ligne</a>
