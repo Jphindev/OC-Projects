@@ -31,7 +31,6 @@ function generateGallery(works) {
 }
 /////////////////////////////////////
 
-
 /////////////////////////////
 // DYNAMIC FILTERS BUTTONS //
 
@@ -44,7 +43,6 @@ async function fetchCategories() {
 	fetch("http://localhost:5678/api/categories")
 		.then((res) => res.json())
 		.then((categories) => {
-
 			// button TOUS to load all the works
 			const tousButton = document.createElement("button");
 			tousButton.innerText = "Tous";
@@ -53,9 +51,9 @@ async function fetchCategories() {
 
 			// click on TOUS -> display all the works
 			tousButton.addEventListener("click", function () {
-				document.querySelectorAll('.filters button').forEach(function(button) {
-					button.style.backgroundColor = 'transparent';
-					button.style.color = 'var(--main-color)';
+				document.querySelectorAll(".filters button").forEach(function (button) {
+					button.style.backgroundColor = "transparent";
+					button.style.color = "var(--main-color)";
 				});
 				tousButton.style.backgroundColor = "var(--main-color)";
 				tousButton.style.color = "white";
@@ -63,7 +61,6 @@ async function fetchCategories() {
 				fetchWork();
 			});
 			for (let i = 0; i < categories.length; i++) {
-
 				// creation of a button for each category
 				const newButton = document.createElement("button");
 				newButton.innerText = categories[i].name;
@@ -71,12 +68,15 @@ async function fetchCategories() {
 
 				// display of the filtered category
 				newButton.addEventListener("click", function () {
-					document.querySelectorAll('.filters button').forEach(function(button) {
-						button.style.backgroundColor = 'transparent';
-						button.style.color = 'var(--main-color)';
-					});
+					document
+						.querySelectorAll(".filters button")
+						.forEach(function (button) {
+							button.style.backgroundColor = "transparent";
+							button.style.color = "var(--main-color)";
+						});
 					newButton.style.backgroundColor = "var(--main-color)";
 					newButton.style.color = "white";
+					// displaying the works of the selected category
 					const works_i = works.filter(function (work) {
 						return work.category.name === categories[i].name;
 					});
@@ -96,13 +96,14 @@ let filters = document.querySelector(".filters");
 if (sessionStorage.getItem("token")) {
 	loadCreatorInterface();
 } else {
-	filters.classList.add("active");
+	filters.classList.add("active"); //display: flex
 	fetchWork();
 	fetchCategories();
 }
 
 function loadCreatorInterface() {
-	filters.classList.remove("active");
+	// filters buttons are not visible in creator mode
+	filters.classList.remove("active"); //display: none
 	// deactivation of the login link
 	let logstate = document.querySelector(".logstate");
 	logstate.innerText = "Logout";
@@ -132,7 +133,7 @@ const modalGallery = document.querySelector(".modalGallery");
 function generateModalGallery(works) {
 	for (let i = 0; i < works.length; i++) {
 		// creation of the following tree:
-		//<div class="modalWork"> <img src="imageUrl"> <div class="trash"> <i id="i" class="fa-solid fa-trash-alt"></i> </div> </div>
+		//<div class="modalWork"> <img src="imageUrl"> <div class="trash"  data-trashid="i"> <i class="fa-solid fa-trash-alt"></i> </div> </div>
 		const modalWork = document.createElement("div");
 		modalWork.classList.add("modalWork");
 
@@ -142,6 +143,7 @@ function generateModalGallery(works) {
 
 		const divTrash = document.createElement("div");
 		divTrash.classList.add("trash");
+		// création d'un attribut personnalisé
 		divTrash.dataset.trashid = `${i}`;
 
 		const iTrash = document.createElement("i");
@@ -152,7 +154,7 @@ function generateModalGallery(works) {
 		modalWork.appendChild(divTrash);
 		modalGallery.appendChild(modalWork);
 
-		// fetch DELETE: click on trash icon id="i" -> del works[i]
+		// fetch DELETE: click on trash icon data-trashid="i" -> del works[i]
 		document
 			.querySelector(`.trash[data-trashid="${i}"]`)
 			.addEventListener("click", async function () {
@@ -199,17 +201,16 @@ imgUpload.classList.add("imgUpload");
 // IMAGE UPLOAD
 let imgSrc;
 let imgUrl = inputFile.addEventListener("change", () => {
-		errorSize.innerText = "";
-		errorFormat.innerText = "";
+	errorSize.innerText = "";
+	errorFormat.innerText = "";
 	const imgFile = inputFile.files[0];
 	if (imgFile.size > 4000000) {
-		errorSize.innerText = "Le fichier est trop volumineux !";
+		errorSize.innerText = "Le fichier doit faire moins de 4Mo !";
 		inputFile.value = "";
 	} else if (imgFile.type !== "image/jpeg" && imgFile.type !== "image/png") {
 		errorFormat.innerText = "Seuls les formats .jpg et .png sont acceptés !";
 		inputFile.value = "";
 	} else {
-		
 		imgSrc = URL.createObjectURL(imgFile);
 		imgUpload.src = imgSrc;
 		Array.from(uploadBox.children).forEach((child) => {
@@ -389,4 +390,3 @@ retour.addEventListener("click", function () {
 	modalUpload.classList.remove("active");
 });
 /////////////////////
-

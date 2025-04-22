@@ -149,9 +149,9 @@
 				<div class="modalGallery">
 					<!-- généré en JS
 					<div class="modalWork">
-						<img src="#">	
-						<div class="trash">
-							<i id="i" class="fa-solid fa-trash-alt"></i>
+						<img src="works[i].imageUrl">	
+						<div class="trash" data-trashid="${i}">
+							<i class="fa-solid fa-trash-alt"></i>
 						</div>
 					</div>
 					-->
@@ -182,6 +182,9 @@
 							required
 						/>
 						<p id="uploadAut">jpg, png : 4mo max</p>
+						<!-- Généré en JS
+							<img class="imgUpload" src="imageSrc"> 
+						-->
 					</div>
 					<div class="uploadInfo">
 						<label for="titleUpload">Titre</label>
